@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sequoia.vehicle.rental">
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.IndexActivity"/>
+        <activity android:name=".activities.profile.AuditorAutoActivity"/>
+        <activity android:name=".activities.details.vertical.AuditDetailsActivity"/>
+        <activity android:name=".activities.profile.SettingActivity"/>
+        <activity android:name=".activities.profile.UserAuthActivity"/>
+        <activity android:name=".activities.profile.WalletActivity"/>
+        <activity android:name=".activities.profile.OwnersAuthActivity"/>
+        <activity android:name=".activities.profile.ModifyActivity"/>
+        <activity android:name=".activities.profile.IntegralActivity"/>
+        <activity android:name=".activities.profile.AuthActivity"/>
+        <activity android:name=".activities.OwnersActivity"/>
+        <activity android:name=".activities.InvestorsActivity"/>
+        <activity android:name=".activities.management.MortgageVehicleActivity"/>
+        <activity android:name=".activities.management.RentalVehicleActivity"/>
+        <activity android:name=".activities.details.vertical.InvestmentDetailsActivity"/>
+        <activity android:name=".activities.LeaseActivity"/>
+        <activity android:name=".activities.details.vertical.LeaseDetailsActivity"/>
+        <activity android:name=".activities.details.vertical.LeaseSubmitActivity"/>
+        <activity android:name=".activities.LeaseConfirmationActivity"/>
+        <activity android:name=".activities.OrderActivity"/>
+        <activity android:name=".activities.CalendarActivity"/>
+        <activity android:name=".activities.details.order.AuditOrderDetailsActivity"/>
+        <activity android:name=".activities.details.order.RentOrderDetailsActivity"/>
+        <activity android:name=".activities.details.order.MortgageOrderDetailsActivity"/>
+        <activity android:name=".activities.details.order.LeaseOrderDetailsActivity"/>
+        <activity android:name=".activities.details.order.InvestmentOrderDetailsActivity"/>
+        <activity android:name=".activities.profile.BalanceActivity"/>
+        <activity android:name=".activities.details.order.UploadCarDetailsActivity"/>
+        <activity android:name=".activities.AuditorVerticalActivity"/>
+        <activity android:name=".activities.MyCarActivity"/>
+        <activity android:name=".activities.BankCardAddActivity"/>
+
+
+        <!--ui图尺寸-->
+        <meta-data
+            android:name="design_width"
+            android:value="750"/>
+        <meta-data
+            android:name="design_height"
+            android:value="1334"/>
+    </application>
+
+</manifest>

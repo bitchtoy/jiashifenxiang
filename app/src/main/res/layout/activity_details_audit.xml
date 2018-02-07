@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_FFFFFF"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="330px"
+        android:layout_height="210px"
+        android:layout_margin="50px"
+        android:src="@drawable/timg"
+        tools:ignore="PxUsage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="雪佛兰 科鲁兹三厢"
+        android:textColor="@color/color_333333"
+        android:textSize="28px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40px"
+        android:layout_marginTop="30px"
+        android:text="2016|0.66万公里|2.0L"
+        android:textColor="@color/color_999999"
+        android:textSize="24px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/audit_icon_address"
+        android:drawablePadding="24px"
+        android:gravity="center_vertical"
+        android:text="石家庄市桥西区海悦天地"
+        android:textColor="@color/color_666666"
+        android:textSize="28px"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="60px"
+        android:background="@color/color_F4F8F9"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="134px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:layout_width="94px"
+            android:layout_height="94px"
+            android:src="@drawable/test"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我是车主"
+                android:textColor="@color/color_333333"
+                android:textSize="32px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:text="我是车主"
+                android:textColor="@color/color_666666"
+                android:textSize="24px"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_F4F8F9"/>
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_call_car"
+        android:layout_width="650px"
+        android:layout_height="80px"
+        android:layout_gravity="center"
+        android:layout_marginTop="70px"
+        android:text="@string/call_car"
+        android:textColor="@color/qmui_main_color"
+        android:textSize="16sp"
+        app:qmui_backgroundColor="@color/color_FF5C60"
+        app:qmui_borderWidth="0dp"
+        app:qmui_isRadiusAdjustBounds="false"
+        app:qmui_radius="5dp"
+        tools:ignore="PxUsage"/>
+</LinearLayout>

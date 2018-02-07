@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:ignore="PxUsage">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30px"
+            android:paddingRight="30px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_attr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/car_icon_click"
+                    android:gravity="center_vertical"
+                    android:text="京A"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"
+                    tools:ignore="RtlHardcoded"/>
+
+                <EditText
+                    android:id="@+id/et_attr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20px"
+                    android:background="@null"
+                    android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_license_plate_number"
+                    android:paddingRight="40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="行驶证拥有人"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <EditText
+                    android:id="@+id/et_driving_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20px"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_enter"
+                    android:paddingRight="40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="租金（元/日）"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <EditText
+                    android:id="@+id/et_rent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20px"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_enter"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系手机号"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20px"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_enter"
+                    android:paddingRight="40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车辆型号"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_car_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="30px"
+                    android:drawableRight="@mipmap/car_icon_click"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_choose"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="购车年份"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_years"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="30px"
+                    android:drawableRight="@mipmap/car_icon_click"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_choose"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上牌省份"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <EditText
+                    android:id="@+id/et_province"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20px"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_enter"
+                    android:paddingRight="40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上牌城市"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <EditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20px"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_enter"
+                    android:paddingRight="40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="行驶里程数（万公里）"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <EditText
+                    android:id="@+id/et_mileage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20px"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_enter"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车辆位置"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_car_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="30px"
+                    android:drawableRight="@mipmap/car_icon_click"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/please_choose"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="72px"
+                android:paddingTop="50px">
+
+                <TextView
+                    android:id="@+id/tv_driving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50px"
+                    android:textColor="@color/color_FF5C60"
+                    android:textSize="24px"/>
+
+                <ImageView
+                    android:id="@+id/iv_choose_driving"
+                    android:layout_width="260px"
+                    android:layout_height="260px"
+                    android:src="@mipmap/zhaopian"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EAECEE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="72px"
+                android:paddingTop="50px">
+
+                <TextView
+                    android:id="@+id/tv_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50px"
+                    android:textColor="@color/color_FF5C60"
+                    android:textSize="24px"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="40px"
+                android:background="@color/color_EAECEE"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_submit"
+        android:layout_width="700px"
+        android:layout_height="80px"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25px"
+        android:text="@string/btn_submit_text"
+        android:textColor="@color/qmui_main_color"
+        android:textSize="16sp"
+        app:qmui_backgroundColor="@color/color_FF5C60"
+        app:qmui_borderWidth="0dp"
+        app:qmui_isRadiusAdjustBounds="false"
+        app:qmui_radius="6dp"/>
+</LinearLayout>

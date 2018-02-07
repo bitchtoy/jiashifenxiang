@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     xmlns:tools="http://schemas.android.com/tools"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:background="@color/color_F4F8F9"
+                                     android:orientation="vertical"
+                                     tools:ignore="PxUsage,RtlHardcoded">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/color_FFFFFF"
+        android:paddingTop="@dimen/status_bar_height"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin">
+
+        <ImageView
+            android:id="@+id/tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:src="@mipmap/my_btn_set"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_FFFFFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/un_edit_nickname"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"
+                    android:textStyle="bold"/>
+
+                <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:src="@drawable/test"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_FFFFFF"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="20px"
+                android:paddingTop="20px">
+
+                <LinearLayout
+                    android:id="@+id/account_balance_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100px"
+                    android:layout_marginRight="100px"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_account_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/omitted"
+                        android:textColor="@color/color_333333"
+                        android:textSize="36px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20px"
+                        android:text="@string/account_balance"
+                        android:textSize="28px"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/integral_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100px"
+                    android:layout_marginRight="100px"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/omitted"
+                        android:textColor="@color/color_333333"
+                        android:textSize="36px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20px"
+                        android:text="@string/integral"
+                        android:textSize="28px"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_FFFFFF"
+                android:orientation="vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_F4F8F9"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/my_icon_order"
+                        android:drawablePadding="20px"
+                        android:gravity="center_vertical"
+                        android:text="@string/rental_order"
+                        android:textColor="@color/color_333333"
+                        android:textSize="32px"/>
+
+                    <TextView
+                        android:id="@+id/tv_all_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="18px"
+                        android:drawableRight="@mipmap/my_btn_click"
+                        android:gravity="center_vertical"
+                        android:text="@string/view_all_order"
+                        android:textColor="@color/color_999999"
+                        android:textSize="26px"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20px"
+                    android:paddingTop="20px">
+
+                    <TextView
+                        android:id="@+id/tv_posted"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/my_icon_release"
+                        android:gravity="center"
+                        android:text="@string/posted"
+                        android:textColor="@color/color_666666"
+                        android:textSize="24px"/>
+
+                    <TextView
+                        android:id="@+id/tv_rented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/my_icon_stay"
+                        android:gravity="center"
+                        android:text="@string/to_be_rented"
+                        android:textColor="@color/color_666666"
+                        android:textSize="24px"/>
+
+                    <TextView
+                        android:id="@+id/tv_leased"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/my_icon_withdrawal"
+                        android:gravity="center"
+                        android:text="@string/leased"
+                        android:textColor="@color/color_666666"
+                        android:textSize="24px"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_mortgage_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:drawableLeft="@mipmap/my_icon_mortgage"
+                    android:drawablePadding="20px"
+                    android:drawableRight="@mipmap/my_btn_click"
+                    android:gravity="center_vertical"
+                    android:text="@string/mortgage_orders"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_investment_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:drawableLeft="@mipmap/my_icon_investment"
+                    android:drawablePadding="20px"
+                    android:drawableRight="@mipmap/my_btn_click"
+                    android:gravity="center_vertical"
+                    android:text="@string/investment_orders"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_lease_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:drawableLeft="@mipmap/my_icon_rent"
+                    android:drawablePadding="20px"
+                    android:drawableRight="@mipmap/my_btn_click"
+                    android:gravity="center_vertical"
+                    android:text="@string/lease_orders"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"
+                    tools:ignore="RtlHardcoded"/>
+
+
+                <TextView
+                    android:id="@+id/tv_audit_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:drawableLeft="@mipmap/my_icon_review"
+                    android:drawablePadding="20px"
+                    android:drawableRight="@mipmap/my_btn_click"
+                    android:gravity="center_vertical"
+                    android:text="@string/audit_orders"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_my_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:drawableLeft="@mipmap/my_icon_car"
+                    android:drawablePadding="20px"
+                    android:drawableRight="@mipmap/my_btn_click"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_car_mine"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"
+                    tools:ignore="RtlHardcoded"/>
+
+                <TextView
+                    android:id="@+id/tv_my_auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:drawableLeft="@mipmap/my_icon_v"
+                    android:drawablePadding="20px"
+                    android:drawableRight="@mipmap/my_btn_click"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_auth"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"
+                    tools:ignore="RtlHardcoded"/>
+
+
+            </LinearLayout>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+def config = rootProject.ext.android
+def library = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config["compileSdkVersion"]
+    buildToolsVersion config["buildToolsVersion"]
+    defaultConfig {
+        applicationId "com.sequoia.vehicle.rental"
+        minSdkVersion config["minSdkVersion"]
+        targetSdkVersion config["targetSdkVersion"]
+        versionCode config["versionCode"]
+        versionName config["versionName"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    //Support
+    compile library["appcompat-v7"]
+    compile library["design"]
+    compile library["support-v4"]
+    compile library["cardview-v7"]
+    compile library["annotations"]
+    compile library["recyclerview-v7"]
+    //权限
+    compile library["rxpermissions2"]
+    //网络
+    compile library["okhttp3"]
+    compile library["okgo"]
+    compile library["okrx2"]
+    compile library["okserver"]
+    //图片
+    compile library["glide"]
+    compile library["glide-compiler"]
+    compile library["glide-loader-okhttp3"]
+    //View
+    compile library["convenientbanner"] //banner
+    compile library["view-pager-transforms"]  //banner
+    compile library["alertview"]  //仿IOS的AlertView
+    compile library["qmui"] //UI
+    compile library["calendarview"] //日历
+    compile library["constraint-layout"] //约束布局
+    compile library["BaseRecyclerViewAdapterHelper"] //RecyclerView的Adapter
+    compile library["RecyclerView_Divider"] //RecyclerView的分割线
+    compile library["pickerview"] //选择器
+    compile library["butterknife"]  // 代码生成
+    annotationProcessor library["butterknife-compiler"]  // 代码生成
+    //Utils
+    compile library["utilcode"] // 工具类集合
+    compile library["autolayout"]  //屏幕适配
+    compile library["statusbarutil"]  //屏幕适配
+}

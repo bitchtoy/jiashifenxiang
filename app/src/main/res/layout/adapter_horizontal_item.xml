@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                     xmlns:tools="http://schemas.android.com/tools"
+                                     android:layout_width="480px"
+                                     android:layout_height="wrap_content"
+                                     android:background="@android:color/white"
+                                     android:orientation="vertical"
+                                     android:paddingRight="20px"
+                                     tools:ignore="PxUsage,RtlHardcoded">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="280px"
+            android:src="@drawable/timg"
+            app:qmui_border_width="0dp"
+            app:qmui_corner_radius="6dp"
+            app:qmui_is_circle="false"/>
+
+        <TextView
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="10px"
+            android:layout_marginRight="10px"
+            android:background="@drawable/round_text_view"
+            android:text="保时捷"
+            android:textColor="@color/color_333333"
+            android:textSize="9sp"
+            tools:ignore="HardcodedText,RtlHardcoded,SmallSp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="20px"
+        android:paddingLeft="10px"
+        android:paddingRight="25px"
+        android:paddingTop="10px">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:src="@drawable/test"
+            app:qmui_border_width="0dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="保时捷"
+                android:textColor="@color/color_333333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动"
+                android:textColor="@color/color_666666"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="￥788/日"
+                android:textColor="@color/color_FF5C60"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="河北石家庄"
+                android:textColor="@color/color_999999"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

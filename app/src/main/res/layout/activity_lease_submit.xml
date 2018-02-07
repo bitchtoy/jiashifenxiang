@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:id="@+id/iv_car_image"
+                android:layout_width="330px"
+                android:layout_height="210px"
+                android:layout_margin="50px"
+                android:src="@drawable/timg"
+                app:qmui_corner_radius="3dp"
+                app:qmui_is_circle="false"
+                tools:ignore="PxUsage"/>
+
+            <TextView
+                android:id="@+id/tv_car_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="雪佛兰 科鲁兹三厢"
+                android:textColor="@color/color_333333"
+                android:textSize="28px"/>
+
+            <TextView
+                android:id="@+id/tv_car_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="30px"
+                android:text="2016|0.66万公里|2.0L"
+                android:textColor="@color/color_999999"
+                android:textSize="24px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/rent_icon_warning"
+                android:drawablePadding="24px"
+                android:gravity="center_vertical"
+                android:text="请不要损坏车辆"
+                android:textColor="@color/color_666666"
+                android:textSize="28px"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="30px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="22px"
+                    android:src="@mipmap/rent_icon_time"/>
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="请选择取车时间"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_lease_term"
+                    android:layout_width="100px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/color_999999"
+                    android:textSize="26px"/>
+
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="请选择还车时间"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="租赁性质"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="租金"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666元"
+                    android:textColor="@color/color_FFA631"
+                    android:textSize="32px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="保险"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666元"
+                    android:textColor="@color/color_FFA631"
+                    android:textSize="32px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="车辆押金"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666元"
+                    android:textColor="@color/color_FFA631"
+                    android:textSize="32px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="违章押金"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666元"
+                    android:textColor="@color/color_FFA631"
+                    android:textSize="32px"/>
+            </LinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:background="@color/color_FF5C60"
+        android:gravity="center"
+        android:text="立即订车"
+        android:textColor="@color/color_FFFFFF"
+        android:textSize="32px"/>
+</LinearLayout>

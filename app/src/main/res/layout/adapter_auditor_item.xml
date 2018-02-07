@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="210px"
+              android:background="@color/color_FFFFFF"
+              android:orientation="horizontal"
+              android:padding="30px"
+              tools:ignore="PxUsage">
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:src="@drawable/test"
+        app:qmui_border_color="@color/color_FFA631"
+        app:qmui_border_width="1dp"
+        app:qmui_is_circle="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="60px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="王宝强"
+            android:textColor="@color/color_333333"
+            android:textSize="28px"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16px"
+            android:layout_marginTop="18px"
+            android:text="石家庄海悦天地E座  距离：13千米"
+            android:textColor="@color/color_666666"
+            android:textSize="24px"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="请他检测"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="12sp"
+            app:qmui_backgroundColor="@color/color_FF5C60"
+            app:qmui_borderWidth="0dp"
+            app:qmui_isRadiusAdjustBounds="false"
+            app:qmui_radius="3dp"/>
+    </LinearLayout>
+</LinearLayout>

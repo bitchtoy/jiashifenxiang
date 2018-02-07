@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tool_bar_color">#0097E0</color>
+    <color name="tool_bar_color1">#018fd4</color>
+    <color name="qmui_main_color">#FFFFFF</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="content_bg">#F4F8F9</color>
+
+    <color name="color_000000">#000000</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_E7E7E7">#e7e7e7</color>
+    <color name="color_F4F8F9">#F4F8F9</color>
+    <color name="color_FF5C60">#FF5C60</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_CCCCCC">#CCCCCC</color>
+    <color name="color_A0A0A0">#A0A0A0</color>
+    <!--车主端-->
+    <color name="color_C155BE">#C155BE</color>
+    <color name="color_5D83BA">#5D83BA</color>
+    <color name="color_D0602F">#D0602F</color>
+    <color name="color_F2F5F8">#F2F5F8</color>
+    <color name="color_C7C7CD">#C7C7CD</color>
+    <color name="color_EAECEE">#EAECEE</color>
+    <color name="color_FFA631">#FFA631</color>
+
+</resources>

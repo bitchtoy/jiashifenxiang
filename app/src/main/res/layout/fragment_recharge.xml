@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="20px"
+              android:orientation="vertical"
+              tools:ignore="PxUsage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230px"
+        android:background="@color/color_FFFFFF"
+        android:orientation="vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="160px"
+                android:layout_height="wrap_content"
+                android:text="储蓄卡"
+                android:textColor="@color/color_333333"
+                android:textSize="32px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@mipmap/my_btn_click"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="建设银行（尾号1484）"
+                android:textColor="@color/color_FF5C60"
+                android:textSize="32px"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_F4F8F9"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="160px"
+                android:layout_height="wrap_content"
+                android:text="金额"
+                android:textColor="@color/color_333333"
+                android:textSize="32px"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入充值金额（元）"
+                android:textColorHint="@color/color_C7C7CD"
+                android:textSize="32px"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="140px"
+        android:text="@string/order_confirm"
+        android:textColor="@color/qmui_main_color"
+        android:textSize="16sp"
+        app:qmui_backgroundColor="@color/color_FF5C60"
+        app:qmui_borderWidth="0dp"
+        app:qmui_isRadiusAdjustBounds="false"
+        app:qmui_radius="6dp"/>
+</LinearLayout>

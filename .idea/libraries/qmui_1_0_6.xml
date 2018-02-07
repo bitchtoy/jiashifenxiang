@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="qmui-1.0.6">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/f8e52644c68adc747fdf38ee49751960e0154f86/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/f8e52644c68adc747fdf38ee49751960e0154f86/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qmuiteam/qmui/1.0.6/ece8bc7fc7b025562252e459a148bff5ddd290af/qmui-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

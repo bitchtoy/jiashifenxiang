@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_F4F8F9"
+              android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:text="请添加本人银行卡"
+        android:textColor="@color/color_999999"
+        android:textSize="24px"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginBottom="1px"
+        android:background="@color/color_FFFFFF"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="50px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="持卡人"
+            android:textColor="@color/color_333333"
+            android:textSize="28px"/>
+
+        <EditText
+            android:id="@+id/et_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="end|center_vertical"
+            android:hint="请输入持卡人姓名"
+            android:textColorHint="@color/color_C7C7CD"
+            android:textSize="28px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginBottom="1px"
+        android:background="@color/color_FFFFFF"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="50px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="卡号"
+            android:textColor="@color/color_333333"
+            android:textSize="28px"/>
+
+        <EditText
+            android:id="@+id/et_bank_card_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="end|center_vertical"
+            android:hint="请输入银行卡号"
+            android:textColorHint="@color/color_C7C7CD"
+            android:textSize="28px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginBottom="1px"
+        android:background="@color/color_FFFFFF"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="50px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="预留手机号"
+            android:textColor="@color/color_333333"
+            android:textSize="28px"/>
+
+        <EditText
+            android:id="@+id/et_card_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="end|center_vertical"
+            android:hint="请输入预留手机号"
+            android:textColorHint="@color/color_C7C7CD"
+            android:textSize="28px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginBottom="1px"
+        android:background="@color/color_FFFFFF"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="50px">
+
+
+        <EditText
+            android:id="@+id/et_sms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:textColorHint="@color/color_C7C7CD"
+            android:textSize="28px"/>
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_sms"
+            android:layout_width="160px"
+            android:layout_height="50px"
+            android:text="获取验证码"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="28px"
+            app:qmui_backgroundColor="@color/color_FF5C60"
+            app:qmui_borderWidth="0dp"
+            />
+    </LinearLayout>
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="700px"
+        android:layout_height="80px"
+        android:layout_gravity="center"
+        android:layout_marginTop="100px"
+        android:text="@string/order_confirm"
+        android:textColor="@color/qmui_main_color"
+        android:textSize="16sp"
+        app:qmui_backgroundColor="@color/color_FF5C60"
+        app:qmui_borderWidth="0dp"
+        app:qmui_isRadiusAdjustBounds="false"
+        app:qmui_radius="6dp"/>
+</LinearLayout>

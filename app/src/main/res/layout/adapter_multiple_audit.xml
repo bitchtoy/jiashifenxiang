@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="230px"
+              android:background="@android:color/white"
+              android:gravity="center_vertical"
+              android:padding="30px"
+              tools:ignore="PxUsage,RtlHardcoded">
+
+    <ImageView
+        android:id="@+id/aecruit_img"
+        android:layout_width="270px"
+        android:layout_height="match_parent"
+        android:src="@drawable/timg"
+        tools:ignore="PxUsage"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aecruit_neme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="沃尔沃Xc60 2018款 T4     四驱驱动版"
+            android:textSize="30px"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/aecruit_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:text="2017/冀A868615/王先生"
+            android:textColor="#666666"
+            android:textSize="24px"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="车辆预估价：12万"
+            android:textColor="@color/color_FF5C60"
+            android:textSize="30px"/>
+
+    </LinearLayout>
+</LinearLayout>

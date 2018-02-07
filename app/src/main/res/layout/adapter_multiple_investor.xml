@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:padding="30px"
+              tools:ignore="PxUsage">
+
+    <ImageView
+        android:id="@+id/iv_car_image"
+        android:layout_width="260px"
+        android:layout_height="160px"
+        android:scaleType="fitXY"
+        android:src="@drawable/timg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aecruit_neme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="沃尔沃Xc60 2018款 T4  四驱驱动版"
+            android:textSize="28px"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px"
+            android:gravity="center_vertical"
+            android:text="期限：3个月年化率12%"
+            android:textColor="@color/color_FF5C60"
+            android:textSize="26px"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16px"
+                android:background="@color/color_FFA631"
+                android:paddingBottom="3px"
+                android:paddingLeft="5px"
+                android:paddingRight="5px"
+                android:paddingTop="3px"
+                android:text="上架时间"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="20px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018年1月10日"
+                android:textColor="@color/color_999999"
+                android:textSize="20px"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

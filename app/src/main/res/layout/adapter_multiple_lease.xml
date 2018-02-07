@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="20px"
+              android:layout_marginRight="20px"
+              android:layout_marginTop="20px"
+              android:orientation="vertical"
+              tools:ignore="PxUsage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350px"
+        android:scaleType="fitXY"
+        android:src="@drawable/timg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="@color/color_FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10px"
+        android:paddingRight="10px">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:src="@drawable/test"
+            app:qmui_border_width="0dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="沃尔沃XC60"
+                android:textColor="@color/color_333333"
+                android:textSize="28px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="2016年/0.66万公里2.0L"
+                android:textColor="@color/color_666666"
+                android:textSize="24px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="888元/天"
+                android:textColor="@color/color_FF5C60"
+                android:textSize="32px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="石家庄海悦天地"
+                android:textColor="@color/color_999999"
+                android:textSize="20px"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

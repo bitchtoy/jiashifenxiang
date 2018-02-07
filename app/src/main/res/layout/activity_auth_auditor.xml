@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              tools:ignore="PxUsage">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40px"
+            android:paddingRight="40px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/auth_dot"/>
+
+                <TextView
+                    android:layout_width="150px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:text="姓名"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/actual_name"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="32px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/auth_dot"/>
+
+                <TextView
+                    android:layout_width="150px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:text="@string/id_card"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+
+                <EditText
+                    android:id="@+id/et_card_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:digits="1234567809Xx"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/id_cart_num"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="32px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/auth_dot"/>
+
+                <TextView
+                    android:layout_width="150px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:text="手机号"
+                    android:textColor="@color/color_333333"
+                    android:textSize="32px"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical|end"
+                    android:hint="@string/correct_phone_number"
+                    android:inputType="phone"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_C7C7CD"
+                    android:textSize="32px"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="40px"
+                android:background="@color/color_F4F8F9"/>
+
+            <LinearLayout
+                android:id="@+id/card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_id_card"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_id_card_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28px"
+                    android:layout_marginTop="20px"
+                    android:textColor="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_id_card_positive"
+                        android:layout_width="300px"
+                        android:layout_height="300px"
+                        android:src="@mipmap/zhengmian"/>
+
+                    <ImageView
+                        android:id="@+id/iv_id_card_opposite"
+                        android:layout_width="300px"
+                        android:layout_height="300px"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/fanmian"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/driver_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_driver"
+                    android:textColor="@color/color_333333"
+                    android:textSize="28px"/>
+
+                <TextView
+                    android:id="@+id/tv_driver_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28px"
+                    android:layout_marginTop="20px"
+                    android:textColor="@color/color_C7C7CD"
+                    android:textSize="28px"/>
+
+                <ImageView
+                    android:id="@+id/iv_choose_driver"
+                    android:layout_width="300px"
+                    android:layout_height="300px"
+                    android:src="@mipmap/zhaopian"/>
+            </LinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_submit"
+        android:layout_width="700px"
+        android:layout_height="80px"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25px"
+        android:text="@string/btn_submit_text"
+        android:textColor="@color/qmui_main_color"
+        android:textSize="16sp"
+        app:qmui_backgroundColor="@color/color_FF5C60"
+        app:qmui_borderWidth="0dp"
+        app:qmui_isRadiusAdjustBounds="false"
+        app:qmui_radius="6dp"/>
+</LinearLayout>

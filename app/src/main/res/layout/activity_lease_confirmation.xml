@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_F4F8F9"
+              android:orientation="vertical"
+              tools:ignore="PxUsage">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"
+        android:layout_marginBottom="20px"
+        tools:ignore="PxUsage"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/yu_e_layout"
+                android:layout_width="match_parent"
+                android:layout_height="98px"
+                android:layout_marginBottom="1px"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"
+                tools:ignore="PxUsage">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/yue"
+                    android:drawablePadding="34px"
+                    android:gravity="center_vertical"
+                    android:text="@string/yu_e"
+                    tools:ignore="RtlHardcoded"/>
+
+                <CheckBox
+                    android:id="@+id/cb_yu_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/check_box"
+                    android:checked="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lease_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="PxUsage">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="98px"
+                    android:layout_marginBottom="1px"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    tools:ignore="PxUsage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rent"
+                        android:textColor="@color/color_333333"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:id="@+id/tv_rent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_FF5C60"
+                        android:textSize="28px"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="98px"
+                    android:layout_marginBottom="1px"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    tools:ignore="PxUsage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/car_deposit"
+                        android:textColor="@color/color_333333"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:id="@+id/tv_car_deposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_FF5C60"
+                        android:textSize="28px"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="98px"
+                    android:layout_marginBottom="1px"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    tools:ignore="PxUsage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/car_illegal_deposit"
+                        android:textColor="@color/color_333333"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:id="@+id/tv_car_illegal_deposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_FF5C60"
+                        android:textSize="28px"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/insurance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="98px"
+                    android:layout_marginBottom="1px"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    tools:ignore="PxUsage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/insurance"
+                        android:textColor="@color/color_333333"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:id="@+id/tv_insurance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20px"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_FF5C60"
+                        android:textSize="28px"
+                        tools:ignore="RtlHardcoded"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_insurance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/check_box"
+                        android:checked="true"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/integral_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="98px"
+                        android:layout_marginTop="1px"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20px"
+                        android:paddingRight="20px"
+                        tools:ignore="PxUsage">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="34px"
+                            android:gravity="center_vertical"
+                            android:text="@string/use_points"
+                            tools:ignore="RtlHardcoded"/>
+
+                        <EditText
+                            android:id="@+id/et_num_points"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20px"
+                            android:background="@null"
+                            android:gravity="center_vertical|end"
+                            android:hint="@string/et_num_points"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textSize="28px"
+                            tools:ignore="RtlHardcoded"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_num_points"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20px"
+                        android:text="可使用0积分"
+                        android:textColor="@color/color_FFA631"
+                        android:textSize="24px"
+                        tools:ignore="HardcodedText"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="horizontal"
+        tools:ignore="PxUsage">
+
+        <TextView
+            android:id="@+id/tv_total_money"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_FFFFFF"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:singleLine="true"
+            android:text="总计：￥0"
+            android:textSize="32px"/>
+
+        <Button
+            android:id="@+id/btn_submit_order"
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:background="@color/color_FF5C60"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="32px"/>
+    </LinearLayout>
+</LinearLayout>
