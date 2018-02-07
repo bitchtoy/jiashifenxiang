@@ -47,6 +47,7 @@
         <activity android:name=".activities.AuditorVerticalActivity"/>
         <activity android:name=".activities.MyCarActivity"/>
         <activity android:name=".activities.BankCardAddActivity"/>
+        <activity android:name=".activities.MyCarDetailsActivity"/>
 
 
         <!--ui图尺寸-->
