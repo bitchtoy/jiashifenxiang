@@ -96,7 +96,7 @@
     <string name="yu_e">余额</string>
     <string name="order_delete">删除</string>
     <string name="order_cancel">取消</string>
-    <string name="audit_completed">审核完成</string>
+    <string name="audit_completed">开始审核</string>
     <string name="order_see_details">查看详情</string>
     <string name="order_confirm">确认</string>
     <string name="order_contact_owner">联系车主</string>

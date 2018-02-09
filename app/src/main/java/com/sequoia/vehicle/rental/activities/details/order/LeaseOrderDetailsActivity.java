@@ -1,13 +1,15 @@
 package com.sequoia.vehicle.rental.activities.details.order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 import com.sequoia.vehicle.rental.R;
+import com.sequoia.vehicle.rental.activities.OrderConfirmationActivity;
 import com.sequoia.vehicle.rental.base.BaseActivity;
 
 import butterknife.BindView;
@@ -21,24 +23,17 @@ import butterknife.OnClick;
  */
 
 public class LeaseOrderDetailsActivity extends BaseActivity {
+
     @BindView(R.id.top_bar)
     QMUITopBar mTopBar;
-    @BindView(R.id.tv_delete)
-    TextView mTvDelete;
-    @BindView(R.id.tv_cancel)
-    TextView mTvCancel;
-    @BindView(R.id.tv_pay)
-    TextView mTvPay;
-    @BindView(R.id.tv_contact_owner)
-    TextView mTvContactOwner;
-    @BindView(R.id.tv_start_time)
-    TextView mTvStartTime;
-    @BindView(R.id.tv_lease_term)
-    TextView mTvLeaseTerm;
-    @BindView(R.id.tv_end_time)
-    TextView mTvEndTime;
     @BindView(R.id.owner_layout)
     LinearLayout mOwnerLayout;
+    @BindView(R.id.btn_pay)
+    QMUIRoundButton mBtnPay;
+    @BindView(R.id.btn_contact_owner)
+    QMUIRoundButton mBtnContactOwner;
+    //    @BindView(R.id.btn_delete)
+//    QMUIRoundButton mBtnDelete;
     private int mTag = 0;
 
     @Override
@@ -54,16 +49,13 @@ public class LeaseOrderDetailsActivity extends BaseActivity {
     private void initBottomBar() {
         switch (mTag) {
             case 0:
-                mTvCancel.setVisibility(View.VISIBLE);
-                mTvPay.setVisibility(View.VISIBLE);
+                mBtnPay.setVisibility(View.VISIBLE);
                 break;
             case 1:
-                mTvCancel.setVisibility(View.VISIBLE);
-                mTvContactOwner.setVisibility(View.VISIBLE);
+                mBtnContactOwner.setVisibility(View.VISIBLE);
                 break;
             case 2:
-                mTvDelete.setVisibility(View.VISIBLE);
-
+//                mBtnDelete.setVisibility(View.VISIBLE);
                 break;
             default:
                 break;
@@ -80,19 +72,21 @@ public class LeaseOrderDetailsActivity extends BaseActivity {
         });
     }
 
-    @OnClick({R.id.tv_delete, R.id.tv_cancel, R.id.tv_pay, R.id.tv_contact_owner})
+
+    @OnClick({R.id.btn_pay, R.id.btn_contact_owner})
     public void onViewClicked(View view) {
+        Intent intent = null;
         switch (view.getId()) {
-            case R.id.tv_delete:
+            case R.id.btn_pay:
+                intent = new Intent(this, OrderConfirmationActivity.class);
                 break;
-            case R.id.tv_cancel:
-                break;
-            case R.id.tv_pay:
-                break;
-            case R.id.tv_contact_owner:
+            case R.id.btn_contact_owner:
                 break;
             default:
                 break;
+        }
+        if (intent != null) {
+            startActivity(intent);
         }
     }
 }

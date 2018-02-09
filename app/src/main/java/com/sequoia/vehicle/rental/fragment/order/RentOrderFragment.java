@@ -39,7 +39,7 @@ import butterknife.Unbinder;
 
 public class RentOrderFragment extends LazyFragment implements BaseQuickAdapter.OnItemChildClickListener {
     private static final String TAG = "TAG";
-    private Context mContext = null;
+
     private int mTag = -1;
 
     @BindView(R.id.recycler_view)
@@ -59,7 +59,7 @@ public class RentOrderFragment extends LazyFragment implements BaseQuickAdapter.
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = getActivity();
+
         Bundle bundle = getArguments();
         if (bundle != null) {
             mTag = bundle.getInt(TAG);
@@ -87,7 +87,7 @@ public class RentOrderFragment extends LazyFragment implements BaseQuickAdapter.
 
     @Override
     public void initData() {
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             list.add(i);
@@ -96,7 +96,7 @@ public class RentOrderFragment extends LazyFragment implements BaseQuickAdapter.
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(mContext, RentOrderDetailsActivity.class);
+                Intent intent = new Intent(mActivity, RentOrderDetailsActivity.class);
                 intent.putExtra(TAG, mTag);
                 startActivity(intent);
             }
@@ -119,13 +119,13 @@ public class RentOrderFragment extends LazyFragment implements BaseQuickAdapter.
                 startActivity(new Intent(mActivity, RentalVehicleActivity.class));
                 break;
             case R.id.tv_confirm:
-                new CommonDialog(mContext)
+                new CommonDialog(mActivity)
                         .setMessage("确定出租次车辆吗？")
                         .setPositive("确认")
                         .setNegtive("取消").setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
                     @Override
                     public void onPositiveClick() {
-                        new CommonDialog(mContext)
+                        new CommonDialog(mActivity)
                                 .setTitle("出租协议")
                                 .setPositive("确认").setSingle(true).show();
                     }

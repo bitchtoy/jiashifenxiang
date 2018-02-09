@@ -44,13 +44,9 @@ public class MyCarActivity extends BaseActivity {
         setContentView(R.layout.activity_my_car);
         ButterKnife.bind(this);
         initTopBar();
-        String[] title = {"抵押", "出租", "租赁", "投资", "审核"};
+//        String[] title = {"抵押", "出租", "租赁", "投资", "审核"};
+        String[] title = { "出租","抵押", "投资", "租赁", "审核"};
         ArrayList<Fragment> fragments = new ArrayList<>();
-//        fragments.add(new MyMortgageFragment());
-//        fragments.add(new MyLeaseFragment());
-//        fragments.add(new MyRentalFragment());
-//        fragments.add(new MyInvestorFragment());
-//        fragments.add(new MyAuditFragment());
         fragments.add(MyCarFragment.getInstance(0));
         fragments.add(MyCarFragment.getInstance(1));
         fragments.add(MyCarFragment.getInstance(2));

@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
  * @funtion
  */
 
-public class LeaseConfirmationActivity extends BaseActivity {
+public class OrderConfirmationActivity extends BaseActivity {
     @BindView(R.id.top_bar)
     QMUITopBar mTopBar;
     @BindView(R.id.cb_yu_e)
@@ -53,12 +53,17 @@ public class LeaseConfirmationActivity extends BaseActivity {
     TextView mTvTotalMoney;
     @BindView(R.id.btn_submit_order)
     Button mBtnSubmitOrder;
+    private int mTag = -1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lease_confirmation);
         ButterKnife.bind(this);
+        mTag = getIntent().getIntExtra("TAG", 0);
+        if (mTag == 0) {
+            mLeaseLayout.setVisibility(View.VISIBLE);
+        }
         initTopBar();
     }
 

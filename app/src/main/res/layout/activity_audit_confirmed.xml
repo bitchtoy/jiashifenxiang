@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_F4F8F9"
+              android:orientation="vertical">
+
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height"/>
+
+    <LinearLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FFFFFF"
+        android:orientation="vertical"
+        android:padding="40px"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传图片"
+            android:textColor="@color/color_333333"
+            android:textSize="28px"/>
+
+        <TextView
+            android:id="@+id/tv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28px"
+            android:layout_marginTop="20px"
+            android:textColor="@color/color_C7C7CD"
+            android:textSize="28px"/>
+
+        <ImageView
+            android:id="@+id/iv_choose_image"
+            android:layout_width="300px"
+            android:layout_height="300px"
+            android:src="@mipmap/zhaopian"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:background="@color/color_FFFFFF"
+        android:orientation="vertical"
+        android:padding="40px"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传视频"
+            android:textColor="@color/color_333333"
+            android:textSize="28px"/>
+
+        <TextView
+            android:id="@+id/tv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28px"
+            android:layout_marginTop="20px"
+            android:textColor="@color/color_C7C7CD"
+            android:textSize="28px"/>
+
+        <ImageView
+            android:id="@+id/iv_choose_video"
+            android:layout_width="300px"
+            android:layout_height="300px"
+            android:src="@mipmap/shipin"/>
+    </LinearLayout>
+</LinearLayout>

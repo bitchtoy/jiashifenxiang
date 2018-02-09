@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.sequoia.vehicle.rental.R;
+import com.sequoia.vehicle.rental.activities.OrderConfirmationActivity;
 import com.sequoia.vehicle.rental.activities.details.order.AuditOrderDetailsActivity;
 import com.sequoia.vehicle.rental.activities.details.order.InvestmentOrderDetailsActivity;
 import com.sequoia.vehicle.rental.adapter.order.AuditOrderAdapter;
@@ -34,9 +35,9 @@ import butterknife.Unbinder;
  * @funtion
  */
 
-public class InvestmentOrderFragment extends LazyFragment implements BaseQuickAdapter.OnItemChildClickListener  {
+public class InvestmentOrderFragment extends LazyFragment implements BaseQuickAdapter.OnItemChildClickListener {
     private static final String TAG = "TAG";
-    private Context mContext = null;
+
     private int mTag = -1;
 
     @BindView(R.id.recycler_view)
@@ -56,7 +57,7 @@ public class InvestmentOrderFragment extends LazyFragment implements BaseQuickAd
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = getActivity();
+
         Bundle bundle = getArguments();
         if (bundle != null) {
             mTag = bundle.getInt(TAG);
@@ -84,7 +85,7 @@ public class InvestmentOrderFragment extends LazyFragment implements BaseQuickAd
 
     @Override
     public void initData() {
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             list.add(i);
@@ -93,8 +94,8 @@ public class InvestmentOrderFragment extends LazyFragment implements BaseQuickAd
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(mContext, InvestmentOrderDetailsActivity.class);
-                intent.putExtra(TAG,mTag);
+                Intent intent = new Intent(mActivity, InvestmentOrderDetailsActivity.class);
+                intent.putExtra(TAG, mTag);
                 startActivity(intent);
             }
         });
@@ -111,8 +112,14 @@ public class InvestmentOrderFragment extends LazyFragment implements BaseQuickAd
             case R.id.tv_cancel:
                 break;
             case R.id.tv_see_details:
+                Intent intent = new Intent(mActivity, InvestmentOrderDetailsActivity.class);
+                intent.putExtra(TAG, mTag);
+                startActivity(intent);
                 break;
             case R.id.tv_pay:
+                Intent intent1 = new Intent(mActivity, OrderConfirmationActivity.class);
+                intent1.putExtra("TAG", 1);
+                startActivity(intent1);
                 break;
             default:
                 break;

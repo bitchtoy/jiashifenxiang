@@ -34,7 +34,7 @@
         <activity android:name=".activities.LeaseActivity"/>
         <activity android:name=".activities.details.vertical.LeaseDetailsActivity"/>
         <activity android:name=".activities.details.vertical.LeaseSubmitActivity"/>
-        <activity android:name=".activities.LeaseConfirmationActivity"/>
+        <activity android:name=".activities.OrderConfirmationActivity"/>
         <activity android:name=".activities.OrderActivity"/>
         <activity android:name=".activities.CalendarActivity"/>
         <activity android:name=".activities.details.order.AuditOrderDetailsActivity"/>
@@ -43,11 +43,12 @@
         <activity android:name=".activities.details.order.LeaseOrderDetailsActivity"/>
         <activity android:name=".activities.details.order.InvestmentOrderDetailsActivity"/>
         <activity android:name=".activities.profile.BalanceActivity"/>
-        <activity android:name=".activities.details.order.UploadCarDetailsActivity"/>
+        <activity android:name=".activities.AuditVehicleDetailsActivity"/>
         <activity android:name=".activities.AuditorVerticalActivity"/>
         <activity android:name=".activities.MyCarActivity"/>
         <activity android:name=".activities.BankCardAddActivity"/>
         <activity android:name=".activities.MyCarDetailsActivity"/>
+        <activity android:name=".activities.AuditConfirmedActivity"/>
 
 
         <!--ui图尺寸-->

@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 import com.sequoia.vehicle.rental.R;
+import com.sequoia.vehicle.rental.activities.details.order.AuditOrderDetailsActivity;
 import com.sequoia.vehicle.rental.activities.details.vertical.AuditDetailsActivity;
 import com.sequoia.vehicle.rental.activities.profile.AuditorAutoActivity;
 import com.sequoia.vehicle.rental.adapter.AuditMultipleAdapter;
@@ -75,6 +76,6 @@ public class AuditFragment extends BaseFragment implements BaseQuickAdapter.OnIt
 
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-        startActivity(new Intent(mActivity, AuditDetailsActivity.class));
+        startActivity(new Intent(mActivity, AuditOrderDetailsActivity.class));
     }
 }

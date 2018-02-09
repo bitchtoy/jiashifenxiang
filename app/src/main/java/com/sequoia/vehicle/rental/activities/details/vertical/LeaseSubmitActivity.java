@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.sequoia.vehicle.rental.R;
 import com.sequoia.vehicle.rental.activities.CalendarActivity;
-import com.sequoia.vehicle.rental.activities.LeaseConfirmationActivity;
+import com.sequoia.vehicle.rental.activities.OrderConfirmationActivity;
 import com.sequoia.vehicle.rental.base.BaseActivity;
 import com.sequoia.vehicle.rental.entities.multiple.FindCarBean;
 
@@ -74,7 +74,7 @@ public class LeaseSubmitActivity extends BaseActivity {
                 startActivityForResult(end, 1000);
                 break;
             case R.id.btn_submit:
-                startActivity(new Intent(this, LeaseConfirmationActivity.class));
+                startActivity(new Intent(this, OrderConfirmationActivity.class));
                 break;
             default:
                 break;

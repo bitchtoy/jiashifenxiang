@@ -12,12 +12,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.sequoia.vehicle.rental.R;
+import com.sequoia.vehicle.rental.activities.AuditConfirmedActivity;
 import com.sequoia.vehicle.rental.activities.details.order.AuditOrderDetailsActivity;
-import com.sequoia.vehicle.rental.activities.details.order.UploadCarDetailsActivity;
+import com.sequoia.vehicle.rental.activities.AuditVehicleDetailsActivity;
 import com.sequoia.vehicle.rental.adapter.order.AuditOrderAdapter;
 import com.sequoia.vehicle.rental.base.LazyFragment;
 
@@ -35,7 +35,6 @@ import butterknife.Unbinder;
 
 public class AuditOrderFragment extends LazyFragment implements BaseQuickAdapter.OnItemChildClickListener {
     private static final String TAG = "TAG";
-    private Context mContext = null;
     private int mTag = -1;
 
     @BindView(R.id.recycler_view)
@@ -55,7 +54,7 @@ public class AuditOrderFragment extends LazyFragment implements BaseQuickAdapter
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = getActivity();
+
         Bundle bundle = getArguments();
         if (bundle != null) {
             mTag = bundle.getInt(TAG);
@@ -83,7 +82,7 @@ public class AuditOrderFragment extends LazyFragment implements BaseQuickAdapter
 
     @Override
     public void initData() {
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             list.add(i);
@@ -93,7 +92,7 @@ public class AuditOrderFragment extends LazyFragment implements BaseQuickAdapter
 
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(mContext, AuditOrderDetailsActivity.class);
+                Intent intent = new Intent(mActivity, AuditOrderDetailsActivity.class);
                 intent.putExtra(TAG, mTag);
                 startActivity(intent);
             }
@@ -109,13 +108,17 @@ public class AuditOrderFragment extends LazyFragment implements BaseQuickAdapter
             case R.id.tv_cancel:
                 break;
             case R.id.tv_audit_completed:
-                startActivity(new Intent(mContext, UploadCarDetailsActivity.class));
+                startActivity(new Intent(mActivity, AuditVehicleDetailsActivity.class));
                 break;
             case R.id.tv_confirm:
+                startActivity(new Intent(mActivity, AuditConfirmedActivity.class));
                 break;
             case R.id.tv_delete:
                 break;
             case R.id.tv_see_details:
+                Intent intent = new Intent(mActivity, AuditOrderDetailsActivity.class);
+                intent.putExtra(TAG, mTag);
+                startActivity(intent);
                 break;
             default:
                 break;

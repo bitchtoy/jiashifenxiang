@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.sequoia.vehicle.rental.R;
 import com.sequoia.vehicle.rental.activities.MyCarDetailsActivity;
+import com.sequoia.vehicle.rental.activities.OrderConfirmationActivity;
 import com.sequoia.vehicle.rental.activities.details.order.AuditOrderDetailsActivity;
 import com.sequoia.vehicle.rental.activities.details.order.InvestmentOrderDetailsActivity;
 import com.sequoia.vehicle.rental.activities.details.order.LeaseOrderDetailsActivity;
@@ -88,8 +89,27 @@ public class MyCarFragment extends LazyFragment implements BaseQuickAdapter.OnIt
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(mActivity, MyCarDetailsActivity.class);
-                intent.putExtra(TAG, mTag);
+                Intent intent = null;
+                switch (mTag){
+                    case 0:
+                        intent = new Intent(mActivity, RentOrderDetailsActivity.class);
+                        break;
+                    case 1:
+                        intent = new Intent(mActivity, MortgageOrderDetailsActivity.class);
+                        break;
+                    case 2:
+                        intent = new Intent(mActivity, InvestmentOrderDetailsActivity.class);
+                        break;
+                    case 3:
+                        intent = new Intent(mActivity, LeaseOrderDetailsActivity.class);
+                        break;
+                    case 4:
+                        intent = new Intent(mActivity, AuditOrderDetailsActivity.class);
+                        break;
+                    default:
+                        break;
+                }
+                intent.putExtra(TAG, -1);
                 startActivity(intent);
             }
         });
@@ -105,8 +125,25 @@ public class MyCarFragment extends LazyFragment implements BaseQuickAdapter.OnIt
     public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
         switch (view.getId()) {
             case R.id.tv_see_details:
+                Intent intent = null;
+                if (mTag == 0){
+                    intent = new Intent(mActivity, RentOrderDetailsActivity.class);
+                }else if (mTag == 1){
+                    intent = new Intent(mActivity, MortgageOrderDetailsActivity.class);
+                }else if (mTag == 2){
+                    intent = new Intent(mActivity, InvestmentOrderDetailsActivity.class);
+                }else if (mTag == 3){
+                    intent = new Intent(mActivity, LeaseOrderDetailsActivity.class);
+                }else if (mTag == 4){
+                    intent = new Intent(mActivity, AuditOrderDetailsActivity.class);
+                }
+                intent.putExtra(TAG, -1);
+                startActivity(intent);
                 break;
             case R.id.tv_repayment:
+                Intent intent1 = new Intent(mActivity, OrderConfirmationActivity.class);
+                intent1.putExtra("TAG", 1);
+                startActivity(intent1);
                 break;
             case R.id.tv_vehicle_deposit:
                 break;

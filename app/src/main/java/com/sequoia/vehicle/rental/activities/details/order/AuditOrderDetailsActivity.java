@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 import com.sequoia.vehicle.rental.R;
+import com.sequoia.vehicle.rental.activities.AuditConfirmedActivity;
+import com.sequoia.vehicle.rental.activities.AuditVehicleDetailsActivity;
 import com.sequoia.vehicle.rental.base.BaseActivity;
 
 import butterknife.BindView;
@@ -24,17 +26,12 @@ import butterknife.OnClick;
 public class AuditOrderDetailsActivity extends BaseActivity {
     @BindView(R.id.top_bar)
     QMUITopBar mTopBar;
-    @BindView(R.id.tv_delete)
-    TextView mTvDelete;
-    @BindView(R.id.tv_cancel)
-    TextView mTvCancel;
-    @BindView(R.id.tv_audit_completed)
-    TextView mTvAuditCompleted;
-
-    @BindView(R.id.tv_confirm)
-    TextView mTvConfirm;
-    @BindView(R.id.owner_layout)
-    LinearLayout mOwnerLayout;
+    @BindView(R.id.btn_audit_completed)
+    QMUIRoundButton mBtnAuditCompleted;
+    @BindView(R.id.btn_confirm)
+    QMUIRoundButton mBtnConfirm;
+    @BindView(R.id.lease_layout)
+    LinearLayout mLeaseLayout;
     private int mTag = 0;
 
     @Override
@@ -50,18 +47,16 @@ public class AuditOrderDetailsActivity extends BaseActivity {
     private void initBottomBar() {
         switch (mTag) {
             case 0:
-                mTvCancel.setVisibility(View.VISIBLE);
-                mTvAuditCompleted.setVisibility(View.VISIBLE);
+                mBtnAuditCompleted.setVisibility(View.VISIBLE);
                 break;
             case 1:
-                mTvCancel.setVisibility(View.VISIBLE);
-                mTvConfirm.setVisibility(View.VISIBLE);
+                mBtnConfirm.setVisibility(View.VISIBLE);
                 break;
             case 2:
-                mTvDelete.setVisibility(View.VISIBLE);
-
+                mLeaseLayout.setVisibility(View.VISIBLE);
                 break;
             default:
+                mLeaseLayout.setVisibility(View.VISIBLE);
                 break;
         }
     }
@@ -76,17 +71,14 @@ public class AuditOrderDetailsActivity extends BaseActivity {
         });
     }
 
-    @OnClick({R.id.tv_delete, R.id.tv_cancel, R.id.tv_audit_completed, R.id.tv_confirm})
+    @OnClick({R.id.btn_audit_completed, R.id.btn_confirm})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.tv_delete:
+            case R.id.btn_audit_completed:
+                startActivity(new Intent(this, AuditVehicleDetailsActivity.class));
                 break;
-            case R.id.tv_cancel:
-                break;
-            case R.id.tv_audit_completed:
-                startActivity(new Intent(AuditOrderDetailsActivity.this, UploadCarDetailsActivity.class));
-                break;
-            case R.id.tv_confirm:
+            case R.id.btn_confirm:
+                startActivity(new Intent(this, AuditConfirmedActivity.class));
                 break;
             default:
                 break;

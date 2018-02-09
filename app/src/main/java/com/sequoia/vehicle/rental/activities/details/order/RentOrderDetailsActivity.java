@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 import com.sequoia.vehicle.rental.R;
 import com.sequoia.vehicle.rental.activities.management.RentalVehicleActivity;
 import com.sequoia.vehicle.rental.base.BaseActivity;
@@ -25,24 +25,17 @@ import butterknife.OnClick;
 public class RentOrderDetailsActivity extends BaseActivity {
     @BindView(R.id.top_bar)
     QMUITopBar mTopBar;
-    @BindView(R.id.tv_vehicle_deposit)
-    TextView mTvVehicleDeposit;
-    @BindView(R.id.tv_cancel)
-    TextView mTvCancel;
-    @BindView(R.id.tv_confirm)
-    TextView mTvConfirm;
-    @BindView(R.id.tv_edit)
-    TextView mTvEdit;
-    @BindView(R.id.tv_illegal_deposit)
-    TextView mTvIllegalDeposit;
     @BindView(R.id.lease_layout)
     LinearLayout mLeaseLayout;
-    @BindView(R.id.tv_start_time)
-    TextView mTvStartTime;
-    @BindView(R.id.tv_lease_term)
-    TextView mTvLeaseTerm;
-    @BindView(R.id.tv_end_time)
-    TextView mTvEndTime;
+    @BindView(R.id.btn_edit)
+    QMUIRoundButton mBtnEdit;
+    @BindView(R.id.btn_confirm)
+    QMUIRoundButton mBtnConfirm;
+    @BindView(R.id.btn_vehicle_deposit)
+    QMUIRoundButton mBtnVehicleDeposit;
+    @BindView(R.id.btn_illegal_deposit)
+    QMUIRoundButton mBtnIllegalDeposit;
+
     private int mTag = 0;
 
     @Override
@@ -58,20 +51,21 @@ public class RentOrderDetailsActivity extends BaseActivity {
     private void initBottomBar() {
         switch (mTag) {
             case 0:
-                mTvCancel.setVisibility(View.VISIBLE);
-                mTvEdit.setVisibility(View.VISIBLE);
+                mBtnEdit.setVisibility(View.VISIBLE);
                 break;
             case 1:
-                mTvCancel.setVisibility(View.VISIBLE);
-                mTvConfirm.setVisibility(View.VISIBLE);
+                mBtnConfirm.setVisibility(View.VISIBLE);
                 mLeaseLayout.setVisibility(View.VISIBLE);
                 break;
             case 2:
                 mLeaseLayout.setVisibility(View.VISIBLE);
-                mTvVehicleDeposit.setVisibility(View.VISIBLE);
-                mTvIllegalDeposit.setVisibility(View.VISIBLE);
+                mBtnVehicleDeposit.setVisibility(View.VISIBLE);
+                mBtnIllegalDeposit.setVisibility(View.VISIBLE);
                 break;
             default:
+                mLeaseLayout.setVisibility(View.VISIBLE);
+                mBtnVehicleDeposit.setVisibility(View.VISIBLE);
+                mBtnIllegalDeposit.setVisibility(View.VISIBLE);
                 break;
         }
     }
@@ -86,19 +80,17 @@ public class RentOrderDetailsActivity extends BaseActivity {
         });
     }
 
-    @OnClick({R.id.tv_vehicle_deposit, R.id.tv_cancel, R.id.tv_confirm, R.id.tv_edit, R.id.tv_illegal_deposit})
+    @OnClick({R.id.btn_edit, R.id.btn_confirm, R.id.btn_vehicle_deposit, R.id.btn_illegal_deposit})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.tv_vehicle_deposit:
-                break;
-            case R.id.tv_cancel:
-                break;
-            case R.id.tv_confirm:
-                break;
-            case R.id.tv_edit:
+            case R.id.btn_edit:
                 startActivity(new Intent(this, RentalVehicleActivity.class));
                 break;
-            case R.id.tv_illegal_deposit:
+            case R.id.btn_confirm:
+                break;
+            case R.id.btn_vehicle_deposit:
+                break;
+            case R.id.btn_illegal_deposit:
                 break;
             default:
                 break;
